@@ -1,0 +1,37 @@
+Windows Registry Editor Version 5.00
+
+; --- POWERSHELL ADMIN (Folder Background) ---
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenElevatedPS]
+@="Open PowerShell Here as Admin"
+"Icon"="powershell.exe"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenElevatedPS\command]
+@="PowerShell -Command \"Start-Process powershell -Verb RunAs -ArgumentList '-NoExit', '-Command', 'Set-Location -LiteralPath ''%V'''\""
+
+; --- POWERSHELL ADMIN (Folder Icon) ---
+[HKEY_CLASSES_ROOT\Directory\shell\OpenElevatedPS]
+@="Open PowerShell Here as Admin"
+"Icon"="powershell.exe"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenElevatedPS\command]
+@="PowerShell -Command \"Start-Process powershell -Verb RunAs -ArgumentList '-NoExit', '-Command', 'Set-Location -LiteralPath ''%V'''\""
+
+; --- CMD ADMIN (Folder Background) ---
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenElevatedCMD]
+@="Open Command Prompt Here as Admin"
+"Icon"="cmd.exe"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenElevatedCMD\command]
+@="PowerShell -Command \"Start-Process cmd -Verb RunAs -ArgumentList '/k pushd \"%V\"'\""
+
+; --- CMD ADMIN (Folder Icon) ---
+[HKEY_CLASSES_ROOT\Directory\shell\OpenElevatedCMD]
+@="Open Command Prompt Here as Admin"
+"Icon"="cmd.exe"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenElevatedCMD\command]
+@="PowerShell -Command \"Start-Process cmd -Verb RunAs -ArgumentList '/k pushd \"%V\"'\""

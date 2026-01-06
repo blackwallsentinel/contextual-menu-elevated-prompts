@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+; --- REMOVE POWERSHELL ADMIN (Folder Background) ---
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\OpenElevatedPS]
+
+; --- REMOVE POWERSHELL ADMIN (Folder Icon) ---
+[-HKEY_CLASSES_ROOT\Directory\shell\OpenElevatedPS]
+
+; --- REMOVE CMD ADMIN (Folder Background) ---
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\OpenElevatedCMD]
+
+; --- REMOVE CMD ADMIN (Folder Icon) ---
+[-HKEY_CLASSES_ROOT\Directory\shell\OpenElevatedCMD]
